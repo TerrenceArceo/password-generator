@@ -1,4 +1,11 @@
 body {
+    --text-color: #5DEF92;
+    --dark-text-color: #111827;
+    --sub-text-color: #6B7280;
+    --background-color: #ECFDF5;
+    --transition-delay: 0.2s;
+    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +25,12 @@ body {
     width: 450px;
 }
 
+#main-body.light {
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+    
+}
+
 #title {
     font-family: Karla;
     font-size: 40px;
@@ -33,6 +46,10 @@ body {
     color: #D5D4D8;
     font-size: 20px;
     margin-bottom: 0;
+}
+
+#subtitle.light {
+    color: var(--sub-text-color);
 }
 
 /* button section  */
@@ -62,4 +79,50 @@ body {
     padding: 10px 35px;
     color: #55F991;
     border-radius: 6px;
+}
+
+/* pill toggle */
+
+.pill-container {
+    width: 100%;
+    height: 30px;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: end;
+}
+
+.pill-container.light {
+    background-color: var(--background-color);
+}
+
+.pill {
+    background-color: #1F2937;
+    width: 50px;
+    height: 25px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.pill::before {
+    position: absolute;
+    content: '';
+    background-color: #10B981;
+    width: 22px;
+    height: 22px;
+    border-radius: 200px;
+    margin: 1.5px;
+    transition: 0.2s;
+}
+
+input:checked + .pill {
+    background-color: #ECFDF5;
+}
+
+input:checked + .pill::before {
+    transform: translateX(25px);
+}
+
+input {
+    display: none;
 }

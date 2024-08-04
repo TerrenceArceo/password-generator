@@ -3,6 +3,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let generatorBtn = document.getElementById("generator-btn")
 let passwordOne = document.getElementById("password-one")
 let passwordTwo = document.getElementById("password-two")
+let pillBtn = document.querySelector(".pill")
+
+pillBtn.addEventListener("click", () => {
+    document.getElementById("main-body").classList.toggle('light')
+    document.querySelector(".pill-container").classList.toggle('light')
+})
 
 generatorBtn.addEventListener("click", () => {
     passwordOne.textContent = ""
