@@ -5,6 +5,8 @@ let passwordOne = document.getElementById("password-one")
 let passwordTwo = document.getElementById("password-two")
 
 generatorBtn.addEventListener("click", () => {
+    passwordOne.textContent = ""
+    passwordTwo.textContent = ""
     for (let i = 0; i < 16; i++) {
         passwordOne.textContent += characters[Math.floor(Math.random() * characters.length)]
     }

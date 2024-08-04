@@ -1,10 +1,12 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     background-color: black;
     letter-spacing: -0.025em;
     text-align: left;
     font-family: Inter;
-    font
 }
 
 /* header section */
@@ -13,18 +15,18 @@ body {
     background-color: #1F2937;
     color: #fff;
     padding: 60px 50px;
-    width: 550px
+    width: 450px;
 }
 
 #title {
     font-family: Karla;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;;
     margin-bottom: 0px;
 }
 
 .random-password-title {
-    color: #10B981;
+    color: #55F991;
 }
 
 #subtitle {
@@ -47,4 +49,17 @@ body {
 
 /* password section */
 
+#password-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    border-top: 1px solid #2F3E53;
+    padding-top: 25px;
+}
 
+.password {
+    background-color: #273549;
+    padding: 10px 35px;
+    color: #55F991;
+    border-radius: 6px;
+}
